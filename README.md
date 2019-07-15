@@ -31,8 +31,9 @@ USAGE
 <!-- commands -->
 * [`checkme add [TODO]`](#checkme-add-todo)
 * [`checkme help [COMMAND]`](#checkme-help-command)
+* [`checkme interact [FILE]`](#checkme-interact-file)
 * [`checkme list`](#checkme-list)
-* [`checkme remove [FILE]`](#checkme-remove-file)
+* [`checkme remove [INDEX]`](#checkme-remove-index)
 
 ## `checkme add [TODO]`
 
@@ -65,6 +66,22 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.0/src/commands/help.ts)_
 
+## `checkme interact [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ checkme interact [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/interact.ts](https://github.com/learning-nodejs/checkme/blob/v1.0.0/src/commands/interact.ts)_
+
 ## `checkme list`
 
 Print out all todos
@@ -80,18 +97,16 @@ OPTIONS
 
 _See code: [src/commands/list.ts](https://github.com/learning-nodejs/checkme/blob/v1.0.0/src/commands/list.ts)_
 
-## `checkme remove [FILE]`
+## `checkme remove [INDEX]`
 
-describe the command here
+Remove a todo from list
 
 ```
 USAGE
-  $ checkme remove [FILE]
+  $ checkme remove [INDEX]
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -h, --help  show CLI help
 ```
 
 _See code: [src/commands/remove.ts](https://github.com/learning-nodejs/checkme/blob/v1.0.0/src/commands/remove.ts)_
