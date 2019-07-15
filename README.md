@@ -29,28 +29,24 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`checkme hello [FILE]`](#checkme-hello-file)
+* [`checkme add [FILE]`](#checkme-add-file)
 * [`checkme help [COMMAND]`](#checkme-help-command)
 
-## `checkme hello [FILE]`
+## `checkme add [FILE]`
 
 describe the command here
 
 ```
 USAGE
-  $ checkme hello [FILE]
+  $ checkme add [FILE]
 
 OPTIONS
   -f, --force
   -h, --help       show CLI help
   -n, --name=name  name to print
-
-EXAMPLE
-  $ checkme hello
-  hello world from ./src/hello.ts!
 ```
 
-_See code: [src/commands/hello.ts](https://github.com/bitwhys/checkme-todo/blob/v0.0.0/src/commands/hello.ts)_
+_See code: [src/commands/add.ts](https://github.com/bitwhys/checkme-todo/blob/v0.0.0/src/commands/add.ts)_
 
 ## `checkme help [COMMAND]`
 
