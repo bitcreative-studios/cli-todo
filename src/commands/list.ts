@@ -1,25 +1,58 @@
-import {Command, flags} from '@oclif/command'
+import { Command, flags } from "@oclif/command"
+import chalk from "chalk"
+import Table from "cli-table"
+import core, { Todo } from "../api/core"
+import base = Mocha.reporters.base
 
 export default class List extends Command {
-  static description = 'describe the command here'
+  static description = "Print out all todos"
 
   static flags = {
-    help: flags.help({char: 'h'}),
-    // flag with a value (-n, --name=VALUE)
-    name: flags.string({char: 'n', description: 'name to print'}),
-    // flag with no value (-f, --force)
-    force: flags.boolean({char: 'f'}),
+    help: flags.help({ char: "h" }),
+    done: flags.boolean({
+      char: "d",
+      description: "list only your completed task",
+    }),
+  }
+  completed = (todos: Todo[]): Table => {
+    const table = new Table({
+      head: [
+        chalk.blueBright("id"),
+        chalk.blueBright("todo"),
+        chalk.blueBright("finished"),
+      ],
+    })
+    for (let todo of todos) {
+      const status = todo.done ? chalk.green("done") : chalk.red("not done")
+      table.push([todo.id, todo.todo, status])
+    }
+    return table
   }
 
-  static args = [{name: 'file'}]
+  basic = (todos: Todo[]): Table => {
+    const table = new Table({
+      head: [
+        chalk.blueBright("added"),
+        chalk.blueBright("todo"),
+        chalk.blueBright("status"),
+      ],
+    })
+    for (let todo of todos) {
+      const status = todo.done ? chalk.green("done") : chalk.red("not done")
+      table.push([todo.added, todo.todo, status])
+    }
+    return table
+  }
 
   async run() {
-    const {args, flags} = this.parse(List)
-
-    const name = flags.name || 'world'
-    this.log(`hello ${name} from /mnt/dev/learning-nodejs/cli-todo/src/commands/list.ts`)
-    if (args.file && flags.force) {
-      this.log(`you input --force and --file: ${args.file}`)
+    const { flags } = this.parse(List)
+    const todos = core.list()
+    let table
+    if (flags.done) {
+      table = this.completed(todos.filter(({ done }) => done))
+    } else {
+      table = this.basic(todos)
     }
+    this.log(table.toString())
   }
 }
