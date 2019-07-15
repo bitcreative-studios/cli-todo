@@ -5,9 +5,9 @@ Just another todo app
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/cli-todo.svg)](https://npmjs.org/package/cli-todo)
-[![CircleCI](https://circleci.com/gh/bitwhys/checkme-todo/tree/master.svg?style=shield)](https://circleci.com/gh/bitwhys/checkme-todo/tree/master)
+[![CircleCI](https://circleci.com/gh/bitwhys/cli-todo/tree/master.svg?style=shield)](https://circleci.com/gh/bitwhys/cli-todo/tree/master)
 [![Downloads/week](https://img.shields.io/npm/dw/cli-todo.svg)](https://npmjs.org/package/cli-todo)
-[![License](https://img.shields.io/npm/l/cli-todo.svg)](https://github.com/bitwhys/checkme-todo/blob/master/package.json)
+[![License](https://img.shields.io/npm/l/cli-todo.svg)](https://github.com/bitwhys/cli-todo/blob/master/package.json)
 
 <!-- toc -->
 * [Usage](#usage)
