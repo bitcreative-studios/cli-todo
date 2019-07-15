@@ -29,24 +29,8 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`checkme add [FILE]`](#checkme-add-file)
 * [`checkme help [COMMAND]`](#checkme-help-command)
-
-## `checkme add [FILE]`
-
-describe the command here
-
-```
-USAGE
-  $ checkme add [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-```
-
-_See code: [src/commands/add.ts](https://github.com/bitwhys/checkme-todo/blob/v0.0.0/src/commands/add.ts)_
+* [`checkme list [FILE]`](#checkme-list-file)
 
 ## `checkme help [COMMAND]`
 
@@ -64,4 +48,20 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.0/src/commands/help.ts)_
+
+## `checkme list [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ checkme list [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/list.ts](https://github.com/bitwhys/checkme-todo/blob/v0.0.0/src/commands/list.ts)_
 <!-- commandsstop -->
