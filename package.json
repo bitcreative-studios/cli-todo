@@ -1,7 +1,7 @@
 {
   "name": "bitwhys-cli-todo",
   "description": "A simple todo cli app",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "George Bockari",
   "bin": {
     "checkme": "./bin/run"
