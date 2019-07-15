@@ -29,22 +29,21 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`checkme add [FILE]`](#checkme-add-file)
+* [`checkme add [TODO]`](#checkme-add-todo)
 * [`checkme help [COMMAND]`](#checkme-help-command)
-* [`checkme list [FILE]`](#checkme-list-file)
+* [`checkme list`](#checkme-list)
+* [`checkme remove [FILE]`](#checkme-remove-file)
 
-## `checkme add [FILE]`
+## `checkme add [TODO]`
 
-describe the command here
+Add new todo to list
 
 ```
 USAGE
-  $ checkme add [FILE]
+  $ checkme add [TODO]
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -d, --done
 ```
 
 _See code: [src/commands/add.ts](https://github.com/learning-nodejs/checkme/blob/v1.0.0/src/commands/add.ts)_
@@ -66,13 +65,28 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.0/src/commands/help.ts)_
 
-## `checkme list [FILE]`
+## `checkme list`
+
+Print out all todos
+
+```
+USAGE
+  $ checkme list
+
+OPTIONS
+  -d, --done  list only your completed task
+  -h, --help  show CLI help
+```
+
+_See code: [src/commands/list.ts](https://github.com/learning-nodejs/checkme/blob/v1.0.0/src/commands/list.ts)_
+
+## `checkme remove [FILE]`
 
 describe the command here
 
 ```
 USAGE
-  $ checkme list [FILE]
+  $ checkme remove [FILE]
 
 OPTIONS
   -f, --force
@@ -80,5 +94,5 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/list.ts](https://github.com/learning-nodejs/checkme/blob/v1.0.0/src/commands/list.ts)_
+_See code: [src/commands/remove.ts](https://github.com/learning-nodejs/checkme/blob/v1.0.0/src/commands/remove.ts)_
 <!-- commandsstop -->
