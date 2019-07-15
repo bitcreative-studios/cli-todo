@@ -20,7 +20,7 @@ $ npm install -g @bitwhys/cli-todo
 $ checkme COMMAND
 running command...
 $ checkme (-v|--version|version)
-@bitwhys/cli-todo/1.0.0 linux-x64 node-v12.4.0
+@bitwhys/cli-todo/1.0.1 linux-x64 node-v12.4.0
 $ checkme --help [COMMAND]
 USAGE
   $ checkme COMMAND
@@ -31,7 +31,7 @@ USAGE
 <!-- commands -->
 * [`checkme add [TODO]`](#checkme-add-todo)
 * [`checkme help [COMMAND]`](#checkme-help-command)
-* [`checkme interact [FILE]`](#checkme-interact-file)
+* [`checkme interact`](#checkme-interact)
 * [`checkme list`](#checkme-list)
 * [`checkme remove [INDEX]`](#checkme-remove-index)
 
@@ -47,7 +47,7 @@ OPTIONS
   -d, --done
 ```
 
-_See code: [src/commands/add.ts](https://github.com/learning-nodejs/checkme/blob/v1.0.0/src/commands/add.ts)_
+_See code: [src/commands/add.ts](https://github.com/learning-nodejs/checkme/blob/v1.0.1/src/commands/add.ts)_
 
 ## `checkme help [COMMAND]`
 
@@ -66,21 +66,16 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.0/src/commands/help.ts)_
 
-## `checkme interact [FILE]`
+## `checkme interact`
 
-describe the command here
+Enter the interactive mode
 
 ```
 USAGE
-  $ checkme interact [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  $ checkme interact
 ```
 
-_See code: [src/commands/interact.ts](https://github.com/learning-nodejs/checkme/blob/v1.0.0/src/commands/interact.ts)_
+_See code: [src/commands/interact.ts](https://github.com/learning-nodejs/checkme/blob/v1.0.1/src/commands/interact.ts)_
 
 ## `checkme list`
 
@@ -95,7 +90,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/list.ts](https://github.com/learning-nodejs/checkme/blob/v1.0.0/src/commands/list.ts)_
+_See code: [src/commands/list.ts](https://github.com/learning-nodejs/checkme/blob/v1.0.1/src/commands/list.ts)_
 
 ## `checkme remove [INDEX]`
 
@@ -109,5 +104,5 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/remove.ts](https://github.com/learning-nodejs/checkme/blob/v1.0.0/src/commands/remove.ts)_
+_See code: [src/commands/remove.ts](https://github.com/learning-nodejs/checkme/blob/v1.0.1/src/commands/remove.ts)_
 <!-- commandsstop -->
