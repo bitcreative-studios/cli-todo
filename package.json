@@ -1,8 +1,9 @@
 {
-  "name": "@bitwhys/cli-todo",
+  "name": "cli-todo",
   "description": "A simple todo cli app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "George Bockari",
+  "private": false,
   "bin": {
     "checkme": "./bin/run"
   },

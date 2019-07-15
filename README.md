@@ -16,11 +16,11 @@ Just another todo app
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g @bitwhys/cli-todo
+$ npm install -g cli-todo
 $ checkme COMMAND
 running command...
 $ checkme (-v|--version|version)
-@bitwhys/cli-todo/1.0.1 linux-x64 node-v12.4.0
+cli-todo/1.0.1 linux-x64 node-v12.4.0
 $ checkme --help [COMMAND]
 USAGE
   $ checkme COMMAND
