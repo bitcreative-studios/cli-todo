@@ -1,25 +1,34 @@
-import {Command, flags} from '@oclif/command'
+import { Command, flags } from "@oclif/command"
+import inquirer from "inquirer"
+import core from "../api/core"
 
 export default class Interact extends Command {
-  static description = 'describe the command here'
-
-  static flags = {
-    help: flags.help({char: 'h'}),
-    // flag with a value (-n, --name=VALUE)
-    name: flags.string({char: 'n', description: 'name to print'}),
-    // flag with no value (-f, --force)
-    force: flags.boolean({char: 'f'}),
-  }
-
-  static args = [{name: 'file'}]
+  static description = "Enter the interactive mode"
 
   async run() {
-    const {args, flags} = this.parse(Interact)
+    const source = core.list()
+    const choices = source
+    const prompt: any = await inquirer.prompt([
+      {
+        type: "checkbox",
+        message: "Update todo",
+        name: "todos",
+        choices: choices.map(todo => {
+          //  the default checked value is determined by the status of todo
+          return { name: todo.todo, checked: todo.done }
+        }),
+      },
+    ])
 
-    const name = flags.name || 'world'
-    this.log(`hello ${name} from /mnt/dev/learning-nodejs/cli-todo/src/commands/interact.ts`)
-    if (args.file && flags.force) {
-      this.log(`you input --force and --file: ${args.file}`)
-    }
+    const finishedTodo = prompt.todos // list of todos selected by user
+    source.forEach((todo, index) => {
+      if (finishedTodo.indexOf(todo.todo) !== -1) {
+        //  the todo is in the select list
+        core.done(index)
+      } else {
+        //   the todo is not in the select list
+        core.undone(index)
+      }
+    })
   }
 }
