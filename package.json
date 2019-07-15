@@ -1,13 +1,12 @@
 {
-  "name": "cli-todo",
+  "name": "bitwhys-cli-todo",
   "description": "A simple todo cli app",
   "version": "1.0.1",
   "author": "George Bockari",
-  "private": false,
   "bin": {
     "checkme": "./bin/run"
   },
-  "bugs": "https://github.com/learning-nodejs/checkme/issues",
+  "bugs": "https://github.com/bitwhys/cli-todo/issues",
   "dependencies": {
     "@oclif/command": "^1",
     "@oclif/config": "^1",
@@ -48,7 +47,7 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/learning-nodejs/checkme",
+  "homepage": "https://github.com/bitwhys/cli-todo",
   "keywords": [
     "oclif"
   ],
@@ -61,7 +60,7 @@
       "@oclif/plugin-help"
     ]
   },
-  "repository": "learning-nodejs/checkme",
+  "repository": "https://github.com/bitwhys/cli-todo.git",
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
     "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",

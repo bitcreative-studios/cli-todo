@@ -16,11 +16,11 @@ Just another todo app
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g cli-todo
+$ npm install -g bitwhys-cli-todo
 $ checkme COMMAND
 running command...
 $ checkme (-v|--version|version)
-cli-todo/1.0.1 linux-x64 node-v12.4.0
+bitwhys-cli-todo/1.0.1 linux-x64 node-v12.4.0
 $ checkme --help [COMMAND]
 USAGE
   $ checkme COMMAND
@@ -47,7 +47,7 @@ OPTIONS
   -d, --done
 ```
 
-_See code: [src/commands/add.ts](https://github.com/learning-nodejs/checkme/blob/v1.0.1/src/commands/add.ts)_
+_See code: [src/commands/add.ts](https://github.com/bitwhys/cli-todo/blob/v1.0.1/src/commands/add.ts)_
 
 ## `checkme help [COMMAND]`
 
@@ -75,7 +75,7 @@ USAGE
   $ checkme interact
 ```
 
-_See code: [src/commands/interact.ts](https://github.com/learning-nodejs/checkme/blob/v1.0.1/src/commands/interact.ts)_
+_See code: [src/commands/interact.ts](https://github.com/bitwhys/cli-todo/blob/v1.0.1/src/commands/interact.ts)_
 
 ## `checkme list`
 
@@ -90,7 +90,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/list.ts](https://github.com/learning-nodejs/checkme/blob/v1.0.1/src/commands/list.ts)_
+_See code: [src/commands/list.ts](https://github.com/bitwhys/cli-todo/blob/v1.0.1/src/commands/list.ts)_
 
 ## `checkme remove [INDEX]`
 
@@ -104,5 +104,5 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/remove.ts](https://github.com/learning-nodejs/checkme/blob/v1.0.1/src/commands/remove.ts)_
+_See code: [src/commands/remove.ts](https://github.com/bitwhys/cli-todo/blob/v1.0.1/src/commands/remove.ts)_
 <!-- commandsstop -->
