@@ -1,25 +1,30 @@
-import {Command, flags} from '@oclif/command'
+import { Command, flags } from "@oclif/command"
+import chalk from "chalk"
+import core from "../api/core"
 
 export default class Add extends Command {
-  static description = 'describe the command here'
+  static description = "Add new todo to list"
 
   static flags = {
-    help: flags.help({char: 'h'}),
-    // flag with a value (-n, --name=VALUE)
-    name: flags.string({char: 'n', description: 'name to print'}),
-    // flag with no value (-f, --force)
-    force: flags.boolean({char: 'f'}),
+    done: flags.boolean({ char: "d" }),
   }
 
-  static args = [{name: 'file'}]
+  static args = [{ name: "todo" }]
 
   async run() {
-    const {args, flags} = this.parse(Add)
+    const { args, flags } = this.parse(Add)
+    const { todo } = args
+    const { done } = flags
 
-    const name = flags.name || 'world'
-    this.log(`hello ${name} from /mnt/dev/learning-nodejs/cli-todo/src/commands/add.ts`)
-    if (args.file && flags.force) {
-      this.log(`you input --force and --file: ${args.file}`)
+    if (todo) {
+      if (done) {
+        core.add(todo, true)
+      } else {
+        core.add(todo)
+      }
+      this.log(`${chalk.green("[Success]")} Added new todo: ${todo}`)
+    } else {
+      this.error(chalk.red("please specify the new todo"))
     }
   }
 }

@@ -5,7 +5,7 @@ import low from "lowdb"
 import uuid from "uuidv4"
 import FileSync from "lowdb/adapters/FileSync"
 
-const DEFAULT_STORAGE_LOCATION = `${process.env.HOME}/.checkme`
+const DEFAULT_STORAGE_LOCATION = `${process.env.HOME}/.todo_cli`
 
 export interface Todo {
   id: string
